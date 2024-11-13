@@ -221,11 +221,14 @@
 			vdd_gpu: DCDC_REG2 {
 				regulator-name = "vdd_gpu";
 				regulator-always-on;
+				regulator-boot-on;
+				
 				regulator-initial-mode = <0x2>;
 				regulator-min-microvolt = <500000>;
 				regulator-max-microvolt = <1350000>;
+				regulator-init-microvolt = <900000>;
 				regulator-ramp-delay = <6001>;
-
+				regulator-initial-mode = <0x2>;
 				regulator-state-mem {
 					regulator-off-in-suspend;
 				};
